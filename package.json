@@ -1,6 +1,7 @@
 {
   "name": "innerstrong-site",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
