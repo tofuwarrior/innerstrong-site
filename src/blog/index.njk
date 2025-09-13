@@ -8,7 +8,7 @@ description: Articles on relaxation, energy, focus, and nervous system mastery.
     <h1>Blog</h1>
     <ul>
       {% for post in collections.post | reverse %}
-        <li><a href="{{ post.url }}">{{ post.data.title }}</a> — <span class="micro">{{ post.date | date("yyyy-LL-dd") }}</span></li>
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a> — <span class="micro">{{ post.date | readableDate }}</span></li>
       {% endfor %}
     </ul>
   </div>
