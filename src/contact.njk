@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Contact | InnerStrong
+description: Contact InnerStrong – questions about classes, memberships, or billing.
+---
+<section class="section">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p>Phone (WhatsApp/Signal): <a href="{{ site.whatsapp }}" target="_blank">{{ site.phone }}</a></p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none;"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+      <label>Your name
+        <input type="text" name="name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <label class="micro">
+        <input type="checkbox" name="consent" required>
+        I consent to you replying to my enquiry and storing my message for this purpose.
+      </label>
+
+      <button class="btn primary" type="submit">Send</button>
+      <p class="micro">You can <strong>unsubscribe from emails anytime</strong> using the link in any message, or by emailing us.</p>
+    </form>
+  </div>
+</section>
