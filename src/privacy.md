@@ -6,10 +6,10 @@ description: Privacy Policy for InnerStrong. How we collect, use, and protect yo
 
 # Privacy Policy
 
-_Last updated: {{ "now" | date("yyyy-LL-dd") }}_
+_Last updated: {{ "now" | readableDate }}_
 
 ## Who we are
-InnerStrong (“we”, “us”) provides in-person classes and related content in Goodwick, Pembrokeshire.  
+InnerStrong (“we”, “us”) provides in-person classes and related content based from  Pembrokeshire.
 **Contact:** [info@beinnerstrong.info](mailto:info@beinnerstrong.info)
 
 ## What data we collect
