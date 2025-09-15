@@ -16,6 +16,18 @@ a{color:var(--brand);text-decoration:none}
   text-decoration: none;
 }
 
+/* Force logo link to render in black */
+.site-header #logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.site-header #logo a:hover,
+.site-header #logo a:focus {
+  color: #000; /* stay black on hover/focus */
+  text-decoration: none;
+}
+
 /* Top row: existing logo (img or text) + INNERSTRONG */
 .site-header #logo .brand-row {
   display: inline-flex;
