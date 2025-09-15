@@ -11,22 +11,23 @@
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container hdr">
-      <h1 id="logo">
-        <a href="/" aria-label="{{ site.brand }} home"><img src="/images/logo.png" alt="{{ site.brand }} logo" /></a>
-        <span class="tagline">{{ site.tagline }}</span>
-      </h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/#imagine">Why this works</a>
-        <a href="/#benefits">Benefits</a>
-        <a href="/#pricing">Pricing</a>
-        <a href="/contact">Contact</a>
-        <a href="/blog/">Blog</a>
-      </nav>
-    </div>
-  </header>
+  <header id="header">
+  <h1 id="logo">
+    <a href="/">
+      <span class="logo-mark">◎</span>  {# optional symbol / replace with your logo image if needed #}
+      <span class="logo-text">INNERSTRONG</span>
+    </a>
+  </h1>
+  <nav id="nav">
+    <ul>
+      {% for item in site.nav %}
+        <li class="{% if page.url == item.url %}current{% endif %}">
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
 
   <main>
     {{ content | safe }}
