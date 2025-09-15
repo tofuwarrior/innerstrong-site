@@ -1,7 +1,11 @@
-export default function(eleventyConfig) {
+// .eleventy.js
+export default function (eleventyConfig) {
   // Passthrough static assets
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "admin": "admin" });
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
 
   // Date formatter used in templates: returns YYYY-MM-DD
   const toISODate = (dateObj) => {
@@ -12,27 +16,25 @@ export default function(eleventyConfig) {
     }
   };
 
-  // Register as a Universal Filter (works in all template engines)
+  // Filters
   eleventyConfig.addFilter("readableDate", toISODate);
-
-  // Also register explicitly for Nunjucks (covers edge cases on some builds)
   eleventyConfig.addNunjucksFilter("readableDate", toISODate);
 
-  // Year shortcode for footer
+  eleventyConfig.addFilter("yearFrom", (d) => {
+    try { return new Date(d).getFullYear(); } catch (e) { return ""; }
+  });
+  eleventyConfig.addNunjucksFilter("yearFrom", (d) => {
+    try { return new Date(d).getFullYear(); } catch (e) { return ""; }
+  });
+
+  // Shortcodes
   eleventyConfig.addShortcode("year", () => new Date().getFullYear());
 
-  // (Optional) Put inside .eleventy.js if you need just a year somewhere
-eleventyConfig.addFilter("yearFrom", d => {
-  try { return new Date(d).getFullYear(); } catch(e) { return ""; }
-});
-eleventyConfig.addNunjucksFilter("yearFrom", d => {
-  try { return new Date(d).getFullYear(); } catch(e) { return ""; }
-});
-
+  // Directory and engine settings
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
-    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
     templateFormats: ["njk", "md", "html"]
   };
 }
