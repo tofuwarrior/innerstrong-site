@@ -4111,24 +4111,6 @@ input, select, textarea {
 			#header .logo strong {
 				font-weight: 300;
 			}
-			/* Keep logo text proportional */
-#logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5em;     /* scales with theme */
-  font-weight: 700;
-  gap: 0.4em;           /* space between mark and text */
-}
-
-#logo .logo-mark {
-  font-size: 1.2em;     /* slightly bigger accent */
-  line-height: 1;
-}
-
-#logo .logo-text {
-  font-size: 1em;       /* stays proportional with #logo size */
-  line-height: 1;
-}
 
 		#header nav {
 			display: -moz-flex;
