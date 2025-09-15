@@ -13,10 +13,22 @@
 <body>
   <header class="site-header">
     <div class="container hdr">
-      <h1 id="logo">
-        <a href="/" aria-label="{{ site.brand }} home"><img src="/images/logo.png" alt="{{ site.brand }} logo" /></a>
-        <span class="tagline">{{ site.tagline }}</span>
-      </h1>
+<h1 id="logo">
+  <a href="/">
+    <span class="brand-row">
+      {# If you use an image logo, set site.logo in your data and it'll be used #}
+      {% if site.logo %}
+        <img src="{{ site.logo }}" alt="{{ site.brand }}">
+      {% else %}
+        <span class="logo-mark">{{ site.brand }}</span>
+      {% endif %}
+
+      <span class="brand-word">INNERSTRONG</span>
+    </span>
+
+    <span class="brand-subline">{{ site.tagline }}</span>
+  </a>
+</h1>
       <nav>
         <a href="/">Home</a>
         <a href="/#imagine">Why this works</a>

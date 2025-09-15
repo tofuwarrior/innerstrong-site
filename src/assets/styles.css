@@ -7,6 +7,64 @@ a{color:var(--brand);text-decoration:none}
 .hdr{display:flex;align-items:center;justify-content:space-between;height:72px}
 #logo img{height:42px;vertical-align:middle}
 #logo .tagline{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:lowercase;color:#6b7280;margin-top:2px}
+/* The logo link remains a single link (as your layout expects). We turn
+   its *contents* into two rows: top row = brand-row, below = subline. */
+.site-header #logo > a {
+  display: inline-flex;
+  flex-direction: column;      /* subline stays underneath */
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+/* Top row: existing logo (img or text) + INNERSTRONG */
+.site-header #logo .brand-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  line-height: 1;
+  /* Scales responsively with viewport while respecting your header rhythm */
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+}
+
+/* If you use an image logo, let it drive the scale of the row */
+.site-header #logo .brand-row img {
+  height: 1.6em;      /* image height tracks the row’s font-size */
+  width: auto;
+  display: block;
+}
+
+/* If you use text as your logo mark */
+.site-header #logo .logo-mark {
+  font-size: 1.2em;   /* slightly larger than the ‘INNERSTRONG’ word */
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* The added brand word */
+.site-header #logo .brand-word {
+  font-size: 1em;     /* stays proportional to the row */
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Subline stays as its own line under the brand-row */
+.site-header #logo .brand-subline,
+.site-header #logo :is(.tagline, .subline) { /* also style common class names if you already use one */
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.65em;  /* smaller than top row, scales with it */
+  line-height: 1.2;
+  opacity: 0.85;
+}
+
+/* Small screens: keep proportions tidy */
+@media (max-width: 640px) {
+  .site-header #logo .brand-row { font-size: clamp(1rem, 5vw, 1.25rem); }
+  .site-header #logo .brand-subline,
+  .site-header #logo :is(.tagline, .subline) { font-size: 0.7em; }
+}
 nav a{margin-left:22px;color:#0b1220}
 .hero{padding:96px 0 56px;background:linear-gradient(180deg,#f8fafc, #ffffff 60%)}
 .hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 16px}
