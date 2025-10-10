@@ -1,0 +1,9 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+  {% include "partials/hero.njk" with { title: title, subtitle: subtitle } %}
+  <section class="wrapper">
+    <div class="inner">
+      {{ content | safe }}
+    </div>
+  </section>
+{% endblock %}

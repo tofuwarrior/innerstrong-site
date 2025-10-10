@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "partials/head.njk" %}
+  <body class="is-preload">
+    <div id="page-wrapper">
+      {% include "partials/header.njk" %}
+      {{ content | safe }}
+      {% include "partials/footer.njk" %}
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

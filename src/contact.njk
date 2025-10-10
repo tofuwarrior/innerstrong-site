@@ -1,0 +1,13 @@
+---
+layout: layouts/page.njk
+title: "Contact"
+subtitle: "Questions are always welcome"
+permalink: "/contact/index.html"
+---
+<form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
+  <p><label>Name <input type="text" name="name" required></label></p>
+  <p><label>Email <input type="email" name="email" required></label></p>
+  <p><label>Phone <input type="text" name="phone"></label></p>
+  <p><button type="submit" class="button primary">Send</button></p>
+</form>

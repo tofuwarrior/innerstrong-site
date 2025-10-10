@@ -1,0 +1,11 @@
+<section id="banner">
+  <div class="inner">
+    <h2>{{ title }}</h2>
+    {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+    {% if cta_href %}
+    <ul class="actions special">
+      <li><a href="{{ cta_href }}" class="button primary">{{ cta_label }}</a></li>
+    </ul>
+    {% endif %}
+  </div>
+</section>
