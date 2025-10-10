@@ -1,7 +1,13 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-  {% include "partials/hero.njk" 
-     with { title: hero_title, subtitle: hero_sub, cta_href: hero_cta_href, cta_label: hero_cta_label } %}
+  {# Map front matter fields to the variables hero.njk expects #}
+  {% set title = hero_title %}
+  {% set subtitle = hero_sub %}
+  {% set cta_href = hero_cta_href %}
+  {% set cta_label = hero_cta_label %}
+
+  {% include "partials/hero.njk" %}
+
   <section class="wrapper">
     <div class="inner">
       {{ content | safe }}
