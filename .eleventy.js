@@ -1,8 +1,11 @@
 import { DateTime } from "luxon";
 
 export default function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
+  // If assets live at src/hypothesis/assets → publish them to /assets
+  eleventyConfig.addPassthroughCopy({ "src/hypothesis/assets": "assets" });
+
+  // If images live at src/hypothesis/images → publish them to /images
+  eleventyConfig.addPassthroughCopy({ "src/hypothesis/images": "images" });
   
   // Add date filter
   eleventyConfig.addFilter("date", function (dateObj, format) {
