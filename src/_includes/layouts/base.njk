@@ -4,7 +4,7 @@
   <body class="is-preload">
     <div id="page-wrapper">
       {% include "partials/header.njk" %}
-      {{ content | safe }}
+        {% block content %}{{ content | safe }}{% endblock %}
       {% include "partials/footer.njk" %}
     </div>
     <script src="/assets/js/jquery.min.js"></script>
