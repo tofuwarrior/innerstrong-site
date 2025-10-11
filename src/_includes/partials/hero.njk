@@ -1,7 +1,9 @@
 <section id="banner">
   <div class="content primary">
-    <h2>{{ title }}</h2>
-    {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+  				<header>
+								 <h1>{{ title }}</h1>
+								{% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+							</header>
     {% if cta_href %}
     <ul class="actions special">
       <li><a href="{{ cta_href }}" class="button primary">{{ cta_label }}</a></li>
@@ -9,4 +11,16 @@
     {% endif %}
   </div>
   <video src="images/banner.mp4" muted autoplay loop playsinline></video>
+</section>
+
+<section id="banner">
+  <div class="inner">
+    <h2>{{ hero_title }}</h2>
+    {% if hero_sub %}<p>{{ hero_sub }}</p>{% endif %}
+    {% if hero_cta_href %}
+      <ul class="actions special">
+        <li><a href="{{ hero_cta_href }}" class="button primary">{{ hero_cta_label }}</a></li>
+      </ul>
+    {% endif %}
+  </div>
 </section>
