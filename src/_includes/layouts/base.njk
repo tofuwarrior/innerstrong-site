@@ -2,7 +2,7 @@
 <html lang="en">
   {% include "partials/head.njk" %}
   <body class="is-preload">
-    <div id="page-wrapper">
+    <div id="wrapper">
       {% include "partials/header.njk" %}
         {% block content %}{{ content | safe }}{% endblock %}
       {% include "partials/footer.njk" %}
