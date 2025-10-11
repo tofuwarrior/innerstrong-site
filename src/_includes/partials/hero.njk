@@ -12,15 +12,3 @@
   </div>
   <video src="images/banner.mp4" muted autoplay loop playsinline></video>
 </section>
-
-<section id="banner">
-  <div class="inner">
-    <h2>{{ hero_title }}</h2>
-    {% if hero_sub %}<p>{{ hero_sub }}</p>{% endif %}
-    {% if hero_cta_href %}
-      <ul class="actions special">
-        <li><a href="{{ hero_cta_href }}" class="button primary">{{ hero_cta_label }}</a></li>
-      </ul>
-    {% endif %}
-  </div>
-</section>
