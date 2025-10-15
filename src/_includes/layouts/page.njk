@@ -3,9 +3,5 @@
   {# Use page variables directly; no 'with' object passing #}
   {% include "partials/hero.njk" %}
 
-  <section class="wrapper">
-    <div class="inner">
       {{ content | safe }}
-    </div>
-  </section>
 {% endblock %}
