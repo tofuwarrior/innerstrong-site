@@ -2,43 +2,28 @@
 layout: layouts/page.njk
 title: "Caring for the Carers"
 subtitle: "for Health service, Social and Teaching Professionals"
+form_name: "programme-enquiry-public-service"
 ---
-<h3>From drained to resilient</h3>
-<p>Paste your programme copy here. Include the shared template blocks and audience-specific notes.</p>
-
-<h3>Pioneer Offer</h3>
-<p>Join the first cohorts… lifetime grandfathering, extra personal input…</p>
-
-<form name="programme-enquiry-public-service" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="programme-enquiry-public-service" />
-  <p><label>Name <input type="text" name="name" required></label></p>
-  <p><label>Email <input type="email" name="email" required></label></p>
-  <p><label>Mobile <input type="text" name="mobile"></label></p>
-  <p><button type="submit" class="button primary">Register interest</button></p>
-</form>
-
-
 
 <section id="programmes" class="main">
-						<header class="alt">
-							<h2>Caring for Carers - Health service, Social and Teaching Professionals</h2>
-							
-							<h3>Move from exhaustion and burnout to energy, confidence and inner calm</h3>
-								<h4>Why am I so passionate about supporting Health, Social Care and Teaching professionals?</h4>
+						<header class="accent1">
+							<h2>Move from exhaustion and burnout to energy, confidence and inner calm</h2>
+								<h3>Why am I so passionate about supporting Health, Social Care and Teaching professionals?</h3>
 								<p>My dad was a teacher, my mum worked in the UK National Health Service all her life and in my acupuncture practise and in classes I have seen nurses, teachers, physios, radiographers, GPs, anaesthetists, surgeons & social workers.  I know how deeply you dedicate yourself to the service of others and the toll it can take on your own wellbeing.</p>
 									<p><strong>My mum could have died due to this dedication</strong><br> After needing to work nearly 24hours straight through, my mum fell sleep driving home and crashed. Thankfully she recovered fine but, I know that too often, despite you giving everything, the system you work in doesn't care effectively for you. </p>
 									<p>Worst of all I know that many of you think about leaving the job you were once passionate about because your wellbeing is being destroyed by it.</p>
 									<h4>I feel massively passionate that you, the people who make the world a better place, should be cared for and properly supported</h4>
 									<h5> I want to give you the skills, support and community that will help you neutralise stress and keep yourself well, so you can feel passionate about your job and still have the energy you want for your own life.</h5>
 						</header>
+
 						<ul class="tabs">
 							<li>
-								<h3>Health, teaching, or social care professional?</h3>
+								<h3>Exclusively for health, teaching, & social care professionals?</h3>
 								<div class="spotlight">
 									<ul>
 										<li>
 											<h4>What is the Programme?</h4>
-											<p>This programme is specifically designed to help you manage the emotional and physical demands of your work in a way that keeps you well and lets you thrive in your personal life. The programme helps you develop skills and experience community, encouragement and support to keep you motivated and progressing. </p>
+											<p>This programme is specifically designed to help you manage the emotional and physical demands of your work in a way that keeps you well and lets you thrive in your personal life. The programme helps you develop skills and experience community, encouragement and support in a journey into energy, health and inner-calm. </p>
 										</li>
 									</ul>
 									<span class="image"><img src="/images/hands-holding-sapling-together.jpg" alt="Hands holding a sapling together" /></span>
@@ -108,3 +93,17 @@ subtitle: "for Health service, Social and Teaching Professionals"
 							</li>-->
 						</ul>
 					</section>
+
+          <h3>Become one of our exclusive pioneers - get additional personal to accelarate your journey into energy, health and inner-calm</h3>
+<p>Enquire about joining the first cohort - get additional personal support through the process and help refine the programme to support your colleagues in future cohorts</p>
+
+<h5>Your name and email are all that stand between you and a journey into energy, health and inner-calm.</h5>
+<p>Take your first step now and you will be contacted promptly to explore if you could benefit from the programme.</p> 
+
+<form name="{{ form_name }}" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="{{ form_name }}" />
+  <p><label>Name <input type="text" name="name" required></label></p>
+  <p><label>Email <input type="email" name="email" required></label></p>
+  <p><label>Mobile <input type="text" name="mobile"></label></p>
+  <p><button type="submit" class="button primary">Register interest</button></p>
+</form>
