@@ -4151,6 +4151,11 @@ input, select, textarea {
 			padding: 0rem 0 4rem 0 ;
 		}
 
+
+				#wrapper > .main > .inner > .auto-center {
+				margin-left: auto;
+				margin-right: auto;
+			}
 			#wrapper > .main > .inner > .image.main:last-child {
 				margin-bottom: -4rem;
 			}
