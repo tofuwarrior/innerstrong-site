@@ -4152,7 +4152,7 @@ input, select, textarea {
 		}
 
 
-				#wrapper > .main > .inner > .auto-center {
+				#wrapper > .main > .inner  .auto-center {
 				margin-left: auto;
 				margin-right: auto;
 			}
