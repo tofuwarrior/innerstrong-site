@@ -2405,10 +2405,19 @@ input, select, textarea {
 			padding-left: 0.25rem;
 		}
 
+
+
+
 	ul {
 		list-style: disc;
 		margin: 0 0 2rem 0;
 		padding-left: 1rem;
+	}
+
+	ul.bullet-none {
+		list-style-type: none;
+		margin: 0 0 2rem 0;
+		
 	}
 
 		ul li {
