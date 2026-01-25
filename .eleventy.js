@@ -15,7 +15,7 @@ export default function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
-  module.exports = function(eleventyConfig) {
+  export default function(eleventyConfig) {
   // This tells Eleventy to copy the file to the output folder
   eleventyConfig.addPassthroughCopy("_redirects");
 
