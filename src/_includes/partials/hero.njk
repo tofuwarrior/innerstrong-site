@@ -1,6 +1,6 @@
 <section id="banner">
   <div class="content primary">
-  				<header>
+  				<header {% if header_class %}class="{{ header_class }}"{% endif %}>
 								 <h1>{{ title }}</h1>
 								{% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
 							</header>
