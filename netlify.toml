@@ -1,3 +1,7 @@
 [build]
   command = "npx @11ty/eleventy"
   publish = "_site"
+[[redirects]]
+  from = "/booknow"
+  to = "/classes-pricing/weekly/"
+  status = 301
