@@ -67,6 +67,32 @@
 		}
 	}
 
+	.sticky-booking-btn {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+		background-color: _palette($p, fg-bold); /* Use your InnerStrong Hex */
+
+		box-shadow: none;
+		color: _palette($p, bg) !important;
+		padding: 15px 25px;
+		border-radius: 50px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+		transition: transform 0.3s ease;
+
+		&:hover {
+				background-color: transparentize(_palette($p, fg-bold), 0.9);
+					transform: scale(1.05);
+				&:active {
+					background-color: transparentize(_palette($p, fg-bold), 0.75);
+				}
+			}
+		}
+
 	@mixin color-button($p: null) {
 		input[type="submit"],
 		input[type="reset"],
@@ -131,3 +157,6 @@
 	}
 
 	@include color-button;
+
+
+
