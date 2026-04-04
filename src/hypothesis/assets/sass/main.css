@@ -1674,13 +1674,6 @@ input[type=radio] {
 input[type=checkbox] + label,
 input[type=radio] + label {
   text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 200;
-  padding-left: 2.4rem;
-  padding-right: 0.75rem;
-  position: relative;
 }
 input[type=checkbox] + label:before,
 input[type=radio] + label:before {
@@ -1694,6 +1687,16 @@ input[type=radio] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+input[type=checkbox] + label,
+input[type=radio] + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 200;
+  padding-left: 2.4rem;
+  padding-right: 0.75rem;
+  position: relative;
 }
 input[type=checkbox] + label:before,
 input[type=radio] + label:before {
@@ -1810,8 +1813,6 @@ input[type=radio]:focus + label:before {
 /* Icon */
 .icon {
   text-decoration: none;
-  border-bottom: none;
-  position: relative;
 }
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
@@ -1824,6 +1825,10 @@ input[type=radio]:focus + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+.icon {
+  border-bottom: none;
+  position: relative;
 }
 .icon > .label {
   display: none;
@@ -2037,9 +2042,6 @@ ul.links {
 }
 ul.links li {
   text-decoration: none;
-  margin-top: 1rem;
-  position: relative;
-  padding-left: 1rem;
 }
 ul.links li:before {
   -moz-osx-font-smoothing: grayscale;
@@ -2052,6 +2054,11 @@ ul.links li:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+ul.links li {
+  margin-top: 1rem;
+  position: relative;
+  padding-left: 1rem;
 }
 ul.links li:before {
   content: "\f105";
@@ -2275,7 +2282,6 @@ table.alt tbody tr td {
   -moz-align-items: -moz-stretch;
   -ms-align-items: -ms-stretch;
   align-items: stretch;
-  margin: 0 0 2rem 0;
 }
 .posts > * {
   -ms-flex-shrink: 1;
@@ -2306,6 +2312,9 @@ table.alt tbody tr td {
 .posts > :nth-child(3n+1),
 .posts > :nth-child(3n) {
   width: calc(33.3333333333% + -0.5rem);
+}
+.posts {
+  margin: 0 0 2rem 0;
 }
 .posts > div > article {
   background-color: #ffffff;
@@ -2376,7 +2385,6 @@ table.alt tbody tr td {
     -moz-align-items: -moz-stretch;
     -ms-align-items: -ms-stretch;
     align-items: stretch;
-    text-align: center;
   }
   .posts > * {
     -ms-flex-shrink: 1;
@@ -2407,6 +2415,9 @@ table.alt tbody tr td {
   .posts > :nth-child(1n+1),
   .posts > :nth-child(1n) {
     width: calc(100% + 1rem);
+  }
+  .posts {
+    text-align: center;
   }
   .posts ul.actions {
     -moz-justify-content: center;
@@ -2641,14 +2652,6 @@ body {
 #header > .navPanelToggle {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, top 0.2s ease-in-out, right 0.2s ease-in-out;
   text-decoration: none;
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: inherit;
-  line-height: inherit;
-  padding: 0 1rem;
-  outline: 0;
 }
 #header > .navPanelToggle:before {
   -moz-osx-font-smoothing: grayscale;
@@ -2661,6 +2664,16 @@ body {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+#header > .navPanelToggle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 1rem;
+  outline: 0;
 }
 #header > .navPanelToggle:before {
   content: "\f0c9";
@@ -4061,6 +4074,20 @@ body.is-preload #banner .content.primary {
 }
 #navPanel .close {
   text-decoration: none;
+}
+#navPanel .close:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+#navPanel .close {
   transition: color 0.2s ease-in-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   border: 0;
@@ -4076,18 +4103,6 @@ body.is-preload #banner .content.primary {
   top: 0;
   vertical-align: middle;
   width: 7em;
-}
-#navPanel .close:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
 }
 #navPanel .close:before {
   content: "\f00d";
